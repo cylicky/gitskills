@@ -36,3 +36,6 @@ MAC  sudo killall -HUP mDNSResponder    sudo dscacheutil -flushcache
   再点击New SSH Key按钮，title可随意填写，
   用记事本打开id_rsa.pub文件，将内容全部复制，
   然后粘贴到Key中，再点击add ssh key按钮
+  
+  git checkout -b dev 创建分支切换到到dev 分支
+  git branch 查看分支
