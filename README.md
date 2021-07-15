@@ -3,6 +3,23 @@ git 上传代码，遇到的问题解决办法
 OpenSSL SSL_connect: Connection was reset in connection to github.com:443
 git config --global http.sslVerify false
 
+ ## 使用git克隆github上的项目失败：unable to access github: OpenSSL SSL_read: Connection was reset, errno 10054
+更新DNS缓存 
+Windows  cmd终端  ipconfig /flushdns
+MAC  sudo killall -HUP mDNSResponder    sudo dscacheutil -flushcache
+
+
+##Q：输入git add readme.txt，得到错误：fatal: not a git repository (or any of the parent directories)。
+
+   A：Git命令必须在Git仓库目录内执行（git init除外），在仓库目录外执行是没有意义的。
+
+##Q：输入git add readme.txt，得到错误fatal: pathspec 'readme.txt' did not match any files。
+
+  A：添加某个文件时，该文件必须在当前目录下存在，用ls或者dir命令查看当前目录的文件，看看文件是否存在，或者是否写错了文件名。
+
+
+
+
 查看 
  1.查看clone 地址：git remote -v
  2.移除https的方式，换成ssh  git remote rm origin 
